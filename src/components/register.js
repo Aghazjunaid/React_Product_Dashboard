@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./header";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import {useHistory} from 'react-router-dom';
 
 function Register() {
+    const history = useHistory()
+
+    useEffect(()=>{
+        if(localStorage.getItem("userData")){
+            history.push("/add")
+        }
+    },[])
+
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [phone, setPhone] = useState('')
-    const history = useHistory()
 
     async function register(e){
         e.preventDefault();
