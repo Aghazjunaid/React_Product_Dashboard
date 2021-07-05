@@ -14,14 +14,16 @@ function Header() {
   }
   return (
     <>
-      <Container fluid>
         <Navbar bg="danger" variant="dark">
-          <Link to="/add" className="navbar-brand font-weight-bold">
+          <Link to="/" className="navbar-brand font-weight-bold">
             Product Dashboard
           </Link>
           <Nav className="mr-auto">
             {localStorage.getItem("userData") ? (
               <>
+                <NavLink to="/" className="nav-link ">
+                  ProductListing
+                </NavLink>
                 <NavLink to="/add" className="nav-link ">
                   AddProduct
                 </NavLink>
@@ -49,7 +51,6 @@ function Header() {
             </Nav>
           ) : null}
         </Navbar>
-      </Container>
     </>
   );
 }
