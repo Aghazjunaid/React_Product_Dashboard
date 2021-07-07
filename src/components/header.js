@@ -16,7 +16,7 @@ function Header() {
     <>
         <Navbar bg="danger" variant="dark">
           <Link to="/" className="navbar-brand font-weight-bold">
-            Product Dashboard
+            Admin Dashboard
           </Link>
           <Nav className="mr-auto">
             {localStorage.getItem("userData") ? (
