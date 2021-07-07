@@ -40,6 +40,7 @@ function Register() {
     <div>
       <Header />
       <Container>
+      <h1 className="text-center">Register</h1>
         <Row style={{ marginTop: "60px" }}>
           <Col md={{ span: 6, offset: 3 }}>
             <Form onSubmit={register}>

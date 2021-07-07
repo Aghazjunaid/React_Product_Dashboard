@@ -39,6 +39,7 @@ function Login() {
         <div>
         <Header />
         <Container>
+        <h1 className="text-center">Login</h1>
           <Row style={{ marginTop: "60px" }}>
             <Col md={{ span: 6, offset: 3 }}>
               <Form onSubmit={login}>
