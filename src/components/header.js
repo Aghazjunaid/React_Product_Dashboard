@@ -27,6 +27,9 @@ function Header() {
                 <NavLink to="/add" className="nav-link ">
                   AddProduct
                 </NavLink>
+                <NavLink to="/search" className="nav-link">
+                  SearchProduct
+                </NavLink>
               </>
             ) : (
               <>
