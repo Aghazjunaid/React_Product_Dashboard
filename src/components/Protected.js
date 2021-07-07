@@ -7,7 +7,7 @@ function Protected(props) {
 
     useEffect(()=>{
         if(!localStorage.getItem("userData")){
-            history.push("/register")
+            history.push("/login")
         }
     },[])
 

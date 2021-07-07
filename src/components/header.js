@@ -27,9 +27,6 @@ function Header() {
                 <NavLink to="/add" className="nav-link ">
                   AddProduct
                 </NavLink>
-                <NavLink to="/update" className="nav-link">
-                  UpdateProduct
-                </NavLink>
               </>
             ) : (
               <>

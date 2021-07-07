@@ -8,7 +8,7 @@ function Register() {
 
     useEffect(()=>{
         if(localStorage.getItem("userData")){
-            history.push("/add")
+            history.push("/")
         }
     },[])
 
@@ -33,7 +33,7 @@ function Register() {
         result = await result.json();
         console.log("result",result)
         localStorage.setItem("userData", JSON.stringify(result));
-        history.push("/add")
+        history.push("/")
     }
 
   return (
