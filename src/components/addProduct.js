@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom';
 import Header from "./header";
 
 function AddProduct() {
-  const [product, setProduct] = useState("");
+  const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState();
   const [currency, setCurrency] = useState("");
@@ -13,7 +13,7 @@ function AddProduct() {
   async function addProduct(e){
     e.preventDefault();
 
-    let productData = {product, description, price, currency}
+    let productData = {name, description, price, currency}
     console.log(productData)
     debugger
     let result = await fetch("http://localhost:8000/product",{
@@ -31,9 +31,6 @@ function AddProduct() {
     history.push("/")
 }
 
-
-  console.log(price,currency)
-
   return (
     <div>
       <Header />
@@ -43,11 +40,11 @@ function AddProduct() {
           <Col md={{ span: 6, offset: 3 }}>
             <Form onSubmit={addProduct}>
               <Form.Group>
-                <Form.Label>Product</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
-                  value={product}
-                  onChange={(e) => setProduct(e.target.value)}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Enter Product"
                 />
               </Form.Group>
