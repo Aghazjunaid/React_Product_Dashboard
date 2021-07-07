@@ -40,7 +40,7 @@ function ProductList() {
               <th>Desciption</th>
               <th>Price</th>
               <th>Currency</th>
-              <th>Operation</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
