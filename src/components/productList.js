@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./header";
 import { Table, Container, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function ProductList() {
   const [data, setData] = useState([]);
@@ -52,6 +53,8 @@ function ProductList() {
                 <td>{item.currency}</td>
                 <td>
                   <Button
+                                    style={{ margin: "8px", cursor:"pointer"}}
+
                     variant="danger"
                     onClick={() => {
                       deleteData(item._id);
@@ -59,6 +62,15 @@ function ProductList() {
                   >
                     Delete
                   </Button>
+                  <Link to={"update/"+item._id}>
+                  <Button
+                  style={{ margin: "8px" }}
+                    variant="primary"
+                  >
+                    Update
+                  </Button>
+
+                  </Link>
                 </td>
               </tr>
             ))}
