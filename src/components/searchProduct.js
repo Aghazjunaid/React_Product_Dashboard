@@ -8,7 +8,6 @@ function SearchProduct() {
   async function search(key) {
       
     let result = await fetch("http://localhost:8000/productsearch/" + key);
-    debugger;
     result = await result.json();
     setData(result.data);
     console.log("result", result.data);

@@ -16,12 +16,10 @@ function ProductList() {
 
   }
 
-  async function deleteData(_id) {
-    debugger
+  async function deleteData(_id) { 
     let result = await fetch(`http://localhost:8000/product/${_id}`, {
       method: "DELETE",
     });
-    debugger
     result = await result.json();
     console.log("result", result);
     getData()

@@ -21,14 +21,12 @@ function UpdateProduct(props) {
     result = await result.json();
     setData(result.data[0]);
     console.log(result.data[0])
-    debugger
   }, []);
   async function updateProduct(e){
     e.preventDefault();
 
     let productData = {name, description, price, currency}
     console.log(productData)
-    debugger
     let result = await fetch("http://localhost:8000/product/"+props.match.params.id,{
         method: 'PUT',
         headers: {
@@ -37,7 +35,6 @@ function UpdateProduct(props) {
         },
         body: JSON.stringify(productData)
     })
-    debugger
     result = await result.json();
     console.log("result",result)
     history.push("/")

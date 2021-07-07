@@ -15,7 +15,6 @@ function AddProduct() {
 
     let productData = {name, description, price, currency}
     console.log(productData)
-    debugger
     let result = await fetch("http://localhost:8000/product",{
         method: 'POST',
         headers: {
@@ -25,7 +24,6 @@ function AddProduct() {
         body: JSON.stringify(productData)
         
     })
-    debugger
     result = await result.json();
     console.log("result",result)
     history.push("/")
